@@ -108,6 +108,7 @@ span a{
 }
 #menu.active{
     opacity: 1;
+    pointer-events: auto;
 }
 /*////////////////////////////////// home saction //////////////////////////////////////////*/
 .bg-photo{
@@ -1185,3 +1186,4 @@ form{
         height: 20vh;
     }
 }
+
