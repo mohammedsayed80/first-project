@@ -13,17 +13,22 @@
 
 <body>
     <nav>
-        <img src="images/logo-alt.webp" alt="logo">
+        <img src="images/logo-alt.webp" alt="logo" class="logo">
         <ul id="menu" class="links-container">
             <li class="links1"><a  href="#">Home</a></li>
             <li class="links"><a href="#about">about</a></li>
             <li class="links"><a href="#price">price</a></li>
             <li class="links"><a href="#team">team</a></li>
             <li class="links"><a href="#blog">blog</a>
-                <span><a href="blog.html">blog post</a></span>
+                <span id="post"><a href="blog.html">blog post</a></span>
             </li>
             <li class="links"><a href="#contact">contact</a></li>
         </ul>
+        <div class="menu-toggle" id="menu-toggle">
+            <div id="s1"></div>
+            <div id="s2"></div>
+            <div id="s3"></div>
+        </div>
     </nav>
     <!-- home section -->
     <div class="bg-photo"></div>
@@ -389,6 +394,7 @@
             <a href="#"><i class='bx bxl-youtube' ></i></a>
         </ul>
     </section>
+    <script src="main.js"></script>
 </body>
 
 </html>
