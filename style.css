@@ -81,6 +81,34 @@ span a{
 .links a:hover::after{
     width: 100%;
 }
+.menu-toggle{
+    width: 2.2em;
+    height: 2.5em;
+    display: none;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column; 
+    cursor: pointer;
+}
+#s1,#s2,#s3{
+    background-color: white;
+    width: 100%;
+    height: 4px;
+    border-radius: .2em;
+    transition: .4s ease all;
+}
+#menu-toggle.active #s1{
+    transform: rotate(45deg) translate(10px,5px);
+}
+#menu-toggle.active #s2{
+    opacity: 0;
+}
+#menu-toggle.active #s3{
+    transform: rotate(-45deg) translate(10px,-5px);
+}
+#menu.active{
+    opacity: 1;
+}
 /*////////////////////////////////// home saction //////////////////////////////////////////*/
 .bg-photo{
     position: relative;
@@ -850,21 +878,45 @@ form{
 @media(max-width:600px){
    nav{
     width: 100vw;
-    height: 20vh;
-    flex-direction: column;
+    height: 10vh;
+   }
+   .logo{
+    width: 8em;
+   }
+   .menu-toggle{
+    display: flex;
    }
     .links-container{
-        width: 100%;
+        width: 13em;
+        height: 30vh;
+        position: absolute;
+        top: 6em;
+        transition: .5s ease all;
+        right: 4em;
+        opacity: 0;
+        pointer-events: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: rgba(0, 0, 0, 0.495);
         font-size: .7em;
+    }
+    #post{
+        right: 4.5em;
+        top: 0;
     }
     /*//////////*/
     .one,.bg-photo{
         width: 100vw;
-        height: 100vh;
+        height: 80vh;
         background-size: cover;
     }
+    .one h1,.one p{
+        width: 90%;
+    }
     .one ul{
-        width: 100%;
+        width: 90%;
     }
     /*/////////////////////////*/
     .welcome{
@@ -977,6 +1029,9 @@ form{
     .me{
         width: 100vw;
         height: 45%;
+    }
+    .me span{
+        top: 3.2em;
     }
     .me img{
         width: 15vw;
